@@ -2,7 +2,7 @@
 
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install lib32gcc1 libc6-i386
 isUserSteam=`id -u steam`
-if [[ -z $isUserSteam];then
+if [ -z $isUserSteam ];then
 password="steam"
 pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
 sudo useradd -m -p $pass steam
